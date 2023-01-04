@@ -1,5 +1,4 @@
-python3 ./hotresearch/hotresearch.py
-
+python3 ./hotresearch/hotmusic.py
 
 year=`date +%Y `
 month=`date +%m `
