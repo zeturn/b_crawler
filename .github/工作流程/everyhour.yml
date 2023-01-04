@@ -1,0 +1,23 @@
+name: crawler
+
+on:
+  workflow_dispatch:
+  schedule:
+  - cron: '0 * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: run start.sh
+        run: |
+          bash ./start.sh
+          
+      - name: GitHub Push
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: $\{{ secrets.GITHUB_TOKEN }}
+          branch: main
