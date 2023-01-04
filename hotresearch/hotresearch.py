@@ -7,14 +7,13 @@ import requests
 import os
 import sys
 
-os.chdir(sys.path[0])
-
 url = "https://api.bilibili.com/x/web-interface/search/square?limit=30"
 
 headers = {
   #     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36",
 }
 
+os.chdir(sys.path[0])
 
 now_time = datetime.datetime.now()
 year = now_time.year
