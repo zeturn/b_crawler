@@ -1,4 +1,4 @@
-name: 抓取
+name: 小时抓取
 
 on:
   workflow_dispatch:
