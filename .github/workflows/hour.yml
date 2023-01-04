@@ -12,9 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: run hourstart.sh
+      - name: run starthour.sh
         run: |
-          bash ./hourstart.sh
+          bash ./starthour.sh
           
       - name: GitHub Push
         uses: ad-m/github-push-action@v0.6.0
