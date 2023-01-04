@@ -5,7 +5,9 @@
 import datetime
 import requests
 import os
+import sys
 
+os.chdir(sys.path[0])
 
 url = "https://api.bilibili.com/x/web-interface/ranking/v2?rid=0&type=all"
 
