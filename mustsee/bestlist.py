@@ -5,7 +5,9 @@
 import datetime
 import requests
 import os
+import sys
 
+os.chdir(sys.path[0])
 url = "https://api.bilibili.com/x/web-interface/popular/precious?page_size=100&page="
 
 headers = {
@@ -32,10 +34,8 @@ for item in data:
     hot_list.append("title:{}#-#up:{}#-#view:{}".format(item_title, item_name,item_view))
 
 output = "\n".join(hot_list)
-if os.path.exists("./hotpoint/{}_{}_{}".format(year, month, day))==False:
-    os.mkdir(r"./hotpoint/{}_{}_{}".format(year, month, day))
 
-with open("./hotpoint/{}_{}_{}/{}_{}_{}_{}.txt".format(year, month, day, year, month, day, hour), "w",encoding="utf8") as f:
+with open("./hotpoint/{}_{}_{}_{}.txt".format(year, month, day, hour), "w",encoding="utf8") as f:
     f.write(output)
 
 #log
