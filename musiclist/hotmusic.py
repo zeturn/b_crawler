@@ -7,7 +7,9 @@ import time
 import requests
 import os
 import json
+import sys
 
+os.chdir(sys.path[0])
 headers = {
   #     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36",
 }
