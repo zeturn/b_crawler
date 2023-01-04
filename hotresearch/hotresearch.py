@@ -5,6 +5,9 @@
 import datetime
 import requests
 import os
+import sys
+
+os.chdir(sys.path[0])
 
 url = "https://api.bilibili.com/x/web-interface/search/square?limit=30"
 
@@ -32,10 +35,10 @@ for item in data:
     hot_list.append("{}: {}".format(item_key, item_show))
 
 output = "\n".join(hot_list)
-if os.path.exists("/hotpoint/{}_{}_{}".format(year, month, day))==False:
-    os.mkdir("/hotpoint/{}_{}_{}".format(year, month, day))
+if os.path.exists("./hotpoint/{}_{}_{}".format(year, month, day))==False:
+    os.mkdir("./hotpoint/{}_{}_{}".format(year, month, day))
 
-with open("/hotpoint/{}_{}_{}/{}_{}_{}_{}.txt".format(year, month, day, year, month, day, hour), mode="w") as f:
+with open("./hotpoint/{}_{}_{}/{}_{}_{}_{}.txt".format(year, month, day, year, month, day, hour), mode="w") as f:
     f.write(output)
 #log
 with open("../log/{}_{}_{}.txt".format(year, month, day), "a",encoding="utf8") as f:
