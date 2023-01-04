@@ -53,10 +53,8 @@ for item in data:
     hot_list.append("music_title:{}#-#video_title:{}".format(item_music_title, item_creation_title))
 
 output = "\n".join(hot_list)
-if os.path.exists("./hotmusic/{}_{}_{}".format(year, month, day))==False:
-    os.mkdir(r"./hotmusic/{}_{}_{}".format(year, month, day))
 
-with open("./hotmusic/{}_{}_{}/{}_{}_{}_{}.txt".format(year, month, day, year, month, day, hour), "w",encoding="utf8") as f:
+with open("./hotmusic/{}_{}_{}_{}.txt".format(year, month, day, hour), "w",encoding="utf8") as f:
     f.write(output)
 
 
