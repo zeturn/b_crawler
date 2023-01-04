@@ -1,4 +1,4 @@
-name: 小时抓取
+name: 每小时抓取
 
 on:
   workflow_dispatch:
@@ -12,9 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: run start.sh
+      - name: run hourstart.sh
         run: |
-          bash ./start.sh
+          bash ./hourstart.sh
           
       - name: GitHub Push
         uses: ad-m/github-push-action@v0.6.0
