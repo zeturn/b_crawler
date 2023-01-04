@@ -33,7 +33,7 @@ for item in data:
 
 output = "\n".join(hot_list)
 if os.path.exists("/hotpoint/{}_{}_{}".format(year, month, day))==False:
-    os.mkdir(r"/hotpoint/{}_{}_{}".format(year, month, day))
+    os.mkdir("/hotpoint/{}_{}_{}".format(year, month, day))
 
 with open("/hotpoint/{}_{}_{}/{}_{}_{}_{}.txt".format(year, month, day, year, month, day, hour), mode="w") as f:
     f.write(output)
