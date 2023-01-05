@@ -9,7 +9,7 @@ A crawler that automatically crawls hot searches on station “B site” (bilibi
 |  -----  | --------- |--------- | ------- | ----  |
 | 热搜\hot research  | [b_crawler/hotresearch/hotpoint/](https://github.com/zeturn/b_crawler/tree/main/hotresearch) | <https://www.bilibili.com> | 每小时更新\every hour | 0 * * * * |
 | 全站排行榜\ranking list | [b_crawler/whole-site-ranking-list/hotlist/](https://github.com/zeturn/b_crawler/tree/main/whole-site-ranking-list) | <https://www.bilibili.com/v/popular/rank/all> | 每小时更新\every hour | 0 * * * * |
-| 入站必刷\must see! | [b_crawler/mustsee/] |https://www.bilibili.com/v/popular/history](https://github.com/zeturn/b_crawler/tree/main/mustsee) | <https://www.bilibili.com/v/popular/history> | 每月更新\every month | 11 5 26 * * |
+| 入站必刷\must see! | [b_crawler/mustsee/](https://github.com/zeturn/b_crawler/tree/main/mustsee) | <https://www.bilibili.com/v/popular/history> | 每月更新\every month | 11 5 26 * * |
 | 音乐榜\music ranking list | [b_crawler/musiclist/hotmusic/](https://github.com/zeturn/b_crawler/tree/main/musiclist) | <https://www.bilibili.com/v/popular/music> | 每周更新\every month | 0 8 * * 0 |
 
 ## 更新状态\update status
