@@ -35,4 +35,4 @@ The .py(python)\.sh(shell)\.md(markdown) files in this library are under the MIT
 
 The content in the .txt file stored in this library is obtained from crawler. Contents in such file are only provided for learning and communication, and are strictly prohibited for commercial use.
 
-如果我们的爬取行为侵犯到了您的合法权力，请使用官方的电子邮件联系 meaninglesstech@outlook.com
+如果我们的爬取行为侵犯到了您的合法权益，请使用官方的电子邮件联系 meaninglesstech@outlook.com
