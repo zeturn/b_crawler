@@ -47,18 +47,23 @@ sess = requests.Session()
 res = sess.get(url2, headers=headers)
 data = res.json()["data"]["list"]
 
+json_output = []#json
+
 #print(data)
 hot_list = []
 for item in data:
     item_music_title = item["music_title"]
     item_creation_title = item["creation_title"] 
     hot_list.append("music_title:{}#-#video_title:{}".format(item_music_title, item_creation_title))
+    json_output.append({"music_title": item_music_title, "creation_title": item_creation_title})
 
 output = "\n".join(hot_list)
 
 with open("./hotmusic/{}_{}_{}_{}.txt".format(year, month, day, hour), "w",encoding="utf8") as f:
     f.write(output)
 
+with open("./json/{}_{}_{}_{}.json".format(year, month, day, hour), "w", encoding="utf-8") as f:
+    json.dump(json_output, f, ensure_ascii=False)
 
 #log
 

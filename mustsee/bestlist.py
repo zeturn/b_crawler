@@ -5,6 +5,7 @@
 import datetime
 import requests
 import os
+import json
 import sys
 
 os.chdir(sys.path[0])
@@ -27,16 +28,25 @@ res = sess.get(url, headers=headers)
 data = res.json()["data"]["list"]
 
 hot_list = []
+json_output = []
+
 for item in data:
     item_title = item["title"]
+    item_aid = item["aid"]
     item_name = item["owner"]['name']
     item_view = item["stat"]['view']
     hot_list.append("title:{}#-#up:{}#-#view:{}".format(item_title, item_name,item_view))
+    json_output.append({"title": item_title, "owner": item_name, "view": item_view, "aid": item_aid})
+
 
 output = "\n".join(hot_list)
 
 with open("./hotpoint/{}_{}_{}_{}.txt".format(year, month, day, hour), "w",encoding="utf8") as f:
     f.write(output)
+
+
+with open("./json/{}_{}_{}_{}.json".format(year, month, day, hour), "w", encoding="utf-8") as f:
+    json.dump(json_output, f, ensure_ascii=False)
 
 #log
 with open("../log/{}_{}_{}.txt".format(year, month, day), "a",encoding="utf8") as f:
